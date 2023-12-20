@@ -22,8 +22,8 @@
 - name: Task level variable
   hosts: all
   tasks:
-    -name: Print URL
-    ansible.builtin.debug:
+   - name: Print URL
+     ansible.builtin.debug:
        msg: URL = {{URL}}
-    vars:
+     vars:
        URL: task.example.com
