@@ -12,7 +12,7 @@
   hosts: all
   vars_files:
     - sample-vars.yml
-  task:
+  tasks:
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
