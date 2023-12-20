@@ -1,5 +1,4 @@
 - name: Demo on variable
-  URL: file.example.com
   hosts: all
   vars:
     URL: file.example.com
