@@ -27,3 +27,10 @@
        msg: URL = {{URL}}
      vars:
        URL: task.example.com
+
+- name: Variable from inventory
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
