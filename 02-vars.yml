@@ -1,7 +1,7 @@
 - name: Demo on Variable
   hosts: all
   vars:
-    URL : Play.example.com
+    URL: Play.example.com
     tasks:
       - name: Print URL
         ansible.builtin.debug:
