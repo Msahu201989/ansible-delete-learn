@@ -1,9 +1,20 @@
-- name: Demo on Variable
+- name: Demo on variable
+  URL: file.example.com
   hosts: all
   vars:
-    URL: Play.example.com
+    URL: file.example.com
   tasks:
-      - name: Print URL
-        ansible.builtin.debug:
-          msg: URL = {{ URL }}
-          msg: "{{ URL }}} is the URL"
+    - name: Print URL
+      ansible.builtin.debug:
+        #        msg: URL = {{ URL }}         # This is not a variable
+        msg: "{{ URL }} is the URL"  # This is a Variable
+
+- name: Demo on file variable
+  hosts: all
+  vars_files:
+    - sample-vars.yml
+  task:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
