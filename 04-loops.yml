@@ -4,3 +4,7 @@
     - name: Print Debug
       ansible.builtin.debug:
         msg: Hello world
+      loops:
+        - apple
+        - banana
+        - orange
